@@ -1,59 +1,82 @@
-# OngFuturoBrilhante
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+# 🚀 Projeto ONG "Futuro Brilhante"
 
-## Development server
+![Status do Projeto](https://img.shields.io/badge/status-conclu%C3%ADdo-brightgreen)
 
-To start a local development server, run:
+Projeto de estudo para a criação de um site institucional completo para uma ONG fictícia, a "Futuro Brilhante". O site foi desenvolvido com foco em responsividade, design moderno e funcionalidades essenciais para apresentar a organização, seus projetos e captar voluntários.
 
-```bash
-ng serve
-```
+---
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📸 Visualização do Site
 
-## Code scaffolding
+Abaixo estão algumas capturas de tela das principais páginas do projeto, demonstrando o layout e o design em sua versão para desktop.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+### Página Inicial
+*Uma visão completa da organização, com seção hero, missão, visão e valores.*
+![Visualização da Página Inicial](assets/imgs/index.png)
 
-```bash
-ng generate component component-name
-```
+### Página de Projetos
+*Uma galeria em grid apresentando os projetos da ONG de forma clara e organizada.*
+![Visualização da Página de Projetos](assets/imgs/projeto.png)
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+### Página de Cadastro de Voluntários
+*Um formulário limpo e funcional com validação de dados em tempo real.*
+![Visualização da Página de Cadastro](assets/imgs/formulario.png)
 
-```bash
-ng generate --help
-```
 
-## Building
+---
 
-To build the project run:
+## ✨ Funcionalidades Principais
 
-```bash
-ng build
-```
+- **Design Totalmente Responsivo:** O layout se adapta perfeitamente a desktops, tablets e celulares, utilizando CSS Flexbox e Grid Layout.
+- **Três Páginas Essenciais:**
+    - **Início:** Apresentação impactante da ONG.
+    - **Projetos:** Galeria com os principais trabalhos desenvolvidos.
+    - **Cadastro:** Formulário para captação de novos voluntários.
+- **Validação de Formulário com JavaScript:**
+    - Verificação de formato de e-mail.
+    - Verificação de campos numéricos (Telefone e CPF).
+    - **Validação matemática de CPF** para garantir que o número inserido é um CPF real e válido.
+- **Feedback ao Usuário:** Alerta de sucesso ao enviar o formulário e mensagens de erro claras caso os dados sejam inválidos.
+- **Componentes Modernos:** Seção "Hero" com degradê, cards interativos e rodapé com ano dinâmico.
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
+## 💻 Tecnologias Utilizadas
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Este projeto foi construído utilizando as seguintes tecnologias front-end:
 
-```bash
-ng test
-```
+- **HTML5:** Para a estruturação semântica do conteúdo.
+- **CSS3:** Para toda a estilização, responsividade e layouts, com uso intensivo de:
+    - `Flexbox`
+    - `Grid Layout`
+    - `Media Queries`
+    - `Variáveis CSS`
+- **JavaScript (ES6+):** Para a interatividade e validação do formulário de cadastro, sem o uso de bibliotecas externas.
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🚀 Como Executar o Projeto
 
-```bash
-ng e2e
-```
+Este é um projeto front-end estático, então não há necessidade de um servidor ou build complexo.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/nome-do-repositorio.git](https://github.com/seu-usuario/nome-do-repositorio.git)
+   ```
+2. **Navegue até a pasta do projeto:**
+   ```bash
+   cd nome-do-repositorio
+   ```
+3. **Abra o arquivo `index.html` no seu navegador de preferência.**
 
-## Additional Resources
+E pronto! Você poderá navegar por todas as páginas do site.
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+---
+
+## 👨‍💻 Autor
+
+Desenvolvido por **José Rodrigo**.
+
+- **GitHub:** [Rodrigoyu](https://github.com/Rodrigoyu)
+- **LinkedIn:** [José Rodrigo](https://www.linkedin.com/in/jose-rodrigo-silva-sena/)

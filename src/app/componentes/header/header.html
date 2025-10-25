@@ -1,0 +1,20 @@
+<header>
+    <div class="div_container_header">
+        <div class="nav_titulo">
+            <h1 class="nav_h1">Futuro Brilhante</h1>
+        </div>
+
+        <button class="buttonToggle" (click)="toggleMenu()" id="menu-hamburguer">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+
+        <nav class="nav_principal" [ngClass]="{ 'ativo': isMenuAberto }">
+            <ul class="ul_nav" id="ul_nav">
+                <li class="li_nav"><a class="a_nav" routerLink="/home">Início</a></li>
+                <li class="li_nav"><a class="a_nav" routerLink="/projetos">Projetos</a></li>
+                <li class="li_nav"><a class="a_nav" routerLink="/cadastro">Cadastro</a></li>
+
+            </ul>
+        </nav>
+    </div>
+</header>
