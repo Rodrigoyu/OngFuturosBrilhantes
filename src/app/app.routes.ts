@@ -9,7 +9,7 @@ import { Projetos } from './paginas/projetos/projetos';
 import { Cadastro } from './paginas/cadastro/cadastro';
 
 // 2. Defina as rotas
-const routes: Routes = [
+export const routes: Routes = [
   { path: 'home', component: Home },
   { path: 'projetos', component: Projetos },
   { path: 'cadastro', component: Cadastro },
