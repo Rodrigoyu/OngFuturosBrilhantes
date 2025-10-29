@@ -122,7 +122,7 @@ header .div_container_header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('assets/imgs/pexels-vanessa-loring-7869230.jpg');
+    background-image: url('../public/assets/imgs/pexels-eliomar-reis-32249053-7031742.jpg');
     background-size: cover;
     background-position: center;
 }
