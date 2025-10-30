@@ -1,46 +1,84 @@
 <main>
-        <section class="pagina-titulo-section">
-  <div class="pagina-titulo-texto">
-      <h1>Seja um Voluntário</h1>
-  </div>
-</section>
+    <section class="pagina-titulo-section">
+        <div class="pagina-titulo-texto">
+            <h1>Seja um Voluntário</h1>
+        </div>
+    </section>
 
-<section class="conteudo-principal">
-  <div class="container">
-      
-      <form class="form-cadastro" [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
-          <h2>Preencha seus dados</h2>
-          <p>Faça parte da nossa equipe e ajude a construir um futuro brilhante!</p>
-          
-          <label for="nome">Nome Completo</label>
-          <input type="text" id="nome" formControlName="nome">
-          <div *ngIf="formCadastro.get('nome')?.invalid && formCadastro.get('nome')?.touched" class="mensagem-erro-angular">
-              Nome é obrigatório.
-          </div>
+    <section class="conteudo-principal">
+        <div class="container">
 
-          <label for="email">E-mail</label>
-          <input type="email" id="email" formControlName="email">
-          <div *ngIf="formCadastro.get('email')?.invalid && formCadastro.get('email')?.touched" class="mensagem-erro-angular">
-              Por favor, insira um e-mail válido.
-          </div>
-          
-          <label for="telefone">Telefone (somente números)</label>
-          <input type="tel" id="telefone" formControlName="telefone">
-          <div *ngIf="formCadastro.get('telefone')?.invalid && formCadastro.get('telefone')?.touched" class="mensagem-erro-angular">
-              Telefone inválido (deve ter 10 ou 11 números).
-          </div>
+            <form class="form-cadastro" [formGroup]="formCadastro" (ngSubmit)="onSubmit()">
+                <h2>Preencha seus dados</h2>
+                <p>Faça parte da nossa equipe e ajude a construir um futuro brilhante!</p>
 
-          <label for="cpf">CPF (somente números)</label>
-          <input type="text" id="cpf" formControlName="cpf" maxlength="11">
-          <div *ngIf="formCadastro.get('cpf')?.invalid && formCadastro.get('cpf')?.touched" class="mensagem-erro-angular">
-              CPF inválido.
-          </div>
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" formControlName="nome">
+                <div *ngIf="formCadastro.get('nome')?.invalid && formCadastro.get('nome')?.touched"
+                    class="mensagem-erro-angular">
+                    Nome é obrigatório.
+                </div>
 
-          <label for="mensagem">Por que você quer ser voluntário?</label>
-          <textarea id="mensagem" formControlName="mensagem" rows="5"></textarea>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" formControlName="email">
+                <div *ngIf="formCadastro.get('email')?.invalid && formCadastro.get('email')?.touched"
+                    class="mensagem-erro-angular">
+                    Por favor, insira um e-mail válido.
+                </div>
 
-          <button type="submit" [disabled]="formCadastro.invalid">Enviar Cadastro</button>
-      </form>
-  </div>
-</section>
-    </main>
+                <label for="telefone">Telefone (somente números)</label>
+                <input type="tel" id="telefone" formControlName="telefone" pattern="\d{10,11}">
+                <div *ngIf="formCadastro.get('telefone')?.invalid && formCadastro.get('telefone')?.touched"
+                    class="mensagem-erro-angular">
+                    Telefone inválido (deve ter 10 ou 11 números).
+                </div>
+
+                <label for="cpf">CPF (somente números)</label>
+                <input type="text" id="cpf" formControlName="cpf" pattern="[0-9]{11}" maxlength="11">
+                <div *ngIf="formCadastro.get('cpf')?.invalid && formCadastro.get('cpf')?.touched"
+                    class="mensagem-erro-angular">
+                    CPF inválido.
+                </div>
+
+                <label for="dataNacimento">Data de Nacimento</label>
+                <input type="date" name="dataNacimento" id="dataNacimento">
+                <div *ngIf="formCadastro.get('dateNacimento')?.invalid && formCadastro.get('dateNacimento')?.touched"
+                    class="mensagem-erro-angular">
+                    Algo Deu Errado
+                </div>
+
+                <label for="endereco">Endereço</label>
+                <input type="text" name="endereco" id="endereco">
+                <div *ngIf="formCadastro.get('endereco')?.invalid && formCadastro.get('endereco')?.touched"
+                    class="mensagem-erro-angular">
+                    Endereço é obrigatório.
+                </div>
+
+                <label for="cep">CEP</label>
+                <input type="text" name="cep" id="cep" pattern="\d{8}">
+                <div *ngIf="formCadastro.get('cep')?.invalid && formCadastro.get('cep')?.touched"
+                    class="mensagem-erro-angular">
+                    O CEP é obrigatório.
+                </div>
+
+                <label for="cidade">Cidade</label>
+                <input type="text" name="cidade" id="cidade">
+                <div *ngIf="formCadastro.get('cidade')?.invalid && formCadastro.get('cidade')?.touched"
+                    class="mensagem-erro-angular">
+                    Cidade é obrigatório.
+                </div>
+                <label for="estado">Estado</label>
+                <input type="text" name="estado" id="estado">
+                <div *ngIf="formCadastro.get('estado')?.invalid && formCadastro.get('estado')?.touched"
+                    class="mensagem-erro-angular">
+                    Estado é obrigatório.
+                </div>
+
+                <label for="mensagem">Por que você quer ser voluntário?</label>
+                <textarea id="mensagem" formControlName="mensagem" rows="5"></textarea>
+
+                <button type="submit" [disabled]="formCadastro.invalid">Enviar Cadastro</button>
+            </form>
+        </div>
+    </section>
+</main>
