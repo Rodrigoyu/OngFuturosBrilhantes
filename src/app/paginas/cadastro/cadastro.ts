@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { ReactiveFormsModule,FormGroup,FormBuilder,Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
@@ -64,12 +65,12 @@ function validaCPF(control:AbstractControl):ValidationErrors | null{
 
 })
 
-
-export class Cadastro {
+ 
+export class Cadastro implements OnInit  {
 
   formCadastro: FormGroup;
-
-  constructor(private fb: FormBuilder) {
+// , private route: ActivatedRoute
+  constructor(private fb: FormBuilder , private route: ActivatedRoute) {
     this.formCadastro = this.fb.group({
       // Define os campos e suas regras de validação
       nome: ['', [Validators.required, Validators.minLength(3)]],
@@ -77,6 +78,15 @@ export class Cadastro {
       telefone: ['', [Validators.required, Validators.pattern(/^\d{10,11}$/)]], // 10 ou 11 dígitos
       cpf: ['', [Validators.required, validaCPF]], // <-- Aplicando nosso validador!
       mensagem: ['', [Validators.required]]
+    });
+  }
+
+  ngOnInit(): void {
+    this.route.queryParams.subscribe(params => {const nomeProjeto = params['projeto'];
+      if(nomeProjeto){
+        const mensagemInicial = `ola tenho interesse em ajuda no projeto "${nomeProjeto}" porque ...`;
+        this.formCadastro.patchValue({mensagem: mensagemInicial});
+      }
     });
   }
 
@@ -97,5 +107,9 @@ export class Cadastro {
     
     this.formCadastro.reset(); // Limpa o formulário
   }
+
+  
+
+
 
 }
