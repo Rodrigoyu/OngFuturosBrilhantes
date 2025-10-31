@@ -270,6 +270,25 @@ header .div_container_header {
     font-weight: var(--fonte-peso-bold);
 }
 
+.botao-projeto {
+    display: inline-block;
+    background-color: var(--cor-acao-amarelo);
+    color: var(--cor-texto-principal);
+    padding: var(--espaco-xs) var(--espaco-sm); /* 8px 16px */
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: var(--fonte-peso-bold);
+    text-align: center;
+    margin-top: var(--espaco-sm); /* 16px */
+    transition: background-color 0.3s;
+    border: 1px solid #ecbe59;
+}
+
+.botao-projeto:hover {
+    background-color: #ecbe59; /* Um tom mais claro do amarelo */
+    border: 1px solid ;
+}
+
 
 /* Formulario */
 .form-cadastro {

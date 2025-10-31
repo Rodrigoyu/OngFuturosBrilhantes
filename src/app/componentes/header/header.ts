@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common'; // <-- 1. IMPORTE O CommonModule
-import { RouterModule } from '@angular/router'; // <-- 2. IMPORTE O RouterModule
+import { CommonModule } from '@angular/common'; 
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-header',
-  // Se 'imports' não existir, adicione a propriedade 'standalone: true'
   standalone: true, 
   imports: [
     CommonModule,   // <-- 3. ADICIONE AQUI
